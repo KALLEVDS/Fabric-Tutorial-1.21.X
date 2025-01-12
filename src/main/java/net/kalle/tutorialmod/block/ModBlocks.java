@@ -2,6 +2,7 @@ package net.kalle.tutorialmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.kalle.tutorialmod.TutorialMod;
+import net.kalle.tutorialmod.block.custom.MagicBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -26,6 +27,8 @@ public class ModBlocks {
     public static Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+    public static Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
