@@ -2,6 +2,7 @@ package net.kalle.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.kalle.tutorialmod.block.ModBlocks;
 import net.kalle.tutorialmod.item.ModItemGroups;
 import net.kalle.tutorialmod.item.ModItems;
@@ -18,5 +19,7 @@ public class TutorialMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 800);
 	}
 }
